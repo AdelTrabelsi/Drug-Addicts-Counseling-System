@@ -34,13 +34,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-       /* $admin = new Admin;
-    $admin->idAdmin = $request->get('idAdmin');
-    $admin->membre()->associate($request->membre());
-    $admin->save();
-
-    return 'Success';   */
-
+        //
     }
 
     /**
