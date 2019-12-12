@@ -15,7 +15,7 @@ class CreateStatutsTable extends Migration
     {
         Schema::create('statuts', function (Blueprint $table) {
             $table->increments('id');
-            $table->longText('statut');
+            $table->string('statut');
             $table->date('dateHeure');
             $table->timestamps();
         });
