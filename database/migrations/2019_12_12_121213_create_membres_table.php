@@ -21,9 +21,8 @@ class CreateMembresTable extends Migration
             $table->string('email')->unique();
             $table->string('mdp');
             $table->unsignedBigInteger('tel');
-            $table->string('dateNais');
-            $table->string('sexe');
-            $table->string('photo');
+            $table->date('dateNais');
+           // $table->string('sexe');
             $table->timestamps();
             //$table->foreign('id')->references('id')->on('membres');
 
