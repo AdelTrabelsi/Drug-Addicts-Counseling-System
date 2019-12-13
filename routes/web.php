@@ -24,3 +24,4 @@ Route::get('/user','UserController@index') ;
 
 
 Route::resource('psychologues','PsychologuesController');
+Route::resource('membres','MembresController');
