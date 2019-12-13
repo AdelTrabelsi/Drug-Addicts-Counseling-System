@@ -10,10 +10,10 @@
                             <i class="fas fa-map-marker-alt"></i> Tunis, Tunisia
                         </li>
                         <li>
-                            <i class="fas fa-envelope-open"></i> Info@gmail.com
+                            <i class="fas fa-envelope-open"></i> haffarnadia1@gmail.com
                         </li>
                         <li>
-                            <i class="fas fa-phone"></i> 31 301 302
+                            <i class="fas fa-phone"></i> 29 852 207
                         </li>
                     </ul>
                 </div>
@@ -67,7 +67,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('assets/img/logo.png') }}" class="logo" alt="Logo">
+                    <img src="{{ asset('assets/img/lo.png') }}" class="logo" alt="Logo">
                 </a>
             </div>
             <!-- End Header Navigation -->
