@@ -21,3 +21,5 @@ Route::get('/contact', function () {
 
 Route::get('/user','UserController@index') ;
 
+Route::resource('membres','MembresController');
+
