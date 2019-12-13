@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDiscussionsTable extends Migration
+class CreateCommentairesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,10 @@ class CreateDiscussionsTable extends Migration
     {
 
         Schema::disableForeignKeyConstraints();
-        Schema::create('discussions', function (Blueprint $table) {
-            $table->increments('id_discussion');
+        Schema::create('commentaires', function (Blueprint $table) {
+            $table->increments('id_comnt');
+            $table->longText('commentaire');
+            $table->date('dateHeure');
             $table->timestamps();
 
             $table->integer('idmembre')->unsigned();
@@ -28,12 +30,12 @@ class CreateDiscussionsTable extends Migration
 
             
 
-            $table->integer('id_psychologues')->unsigned();
+          /*  $table->integer('id_psychologues')->unsigned();
              $table->foreign('id_psychologues')
             ->references('id_psychologues')
             ->on('psychologues')
             ->onDelete('restrict')
-            ->onUpdate('restrict');
+            ->onUpdate('restrict');*/
         });
     }
 
@@ -44,6 +46,6 @@ class CreateDiscussionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('discussions');
+        Schema::dropIfExists('commentaires');
     }
 }

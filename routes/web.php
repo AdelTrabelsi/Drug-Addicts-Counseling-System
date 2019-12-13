@@ -20,3 +20,4 @@ Route::get('/contact', function () {
 
 
 Route::get('/user','UserController@index') ;
+

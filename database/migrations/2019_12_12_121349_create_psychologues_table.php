@@ -14,7 +14,7 @@ class CreatePsychologuesTable extends Migration
     public function up()
     {
         Schema::create('psychologues', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_psychologues');
             $table->string('nom');
             $table->string('prenom');
             $table->string('adresseCabinet');

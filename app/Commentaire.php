@@ -4,10 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Discussion extends Model
+class Commentaire extends Model
 {
-    //
-
     protected $guarded = [];
 
         public function membre()
@@ -15,8 +13,8 @@ class Discussion extends Model
         return $this->belongsTo(Membre::class); 
     }
 
-    public function psychologue()
+   /* public function psychologue()
     { 
         return $this->belongsTo(Psychologue::class); 
-    }
+    }*/
 }

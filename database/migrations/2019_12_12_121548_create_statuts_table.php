@@ -13,11 +13,29 @@ class CreateStatutsTable extends Migration
      */
     public function up()
     {
+
+        Schema::disableForeignKeyConstraints();
         Schema::create('statuts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_statut');
             $table->longText('statut');
             $table->date('dateHeure');
             $table->timestamps();
+
+            $table->integer('idmembre')->unsigned();
+             $table->foreign('idmembre')
+            ->references('idmembre')
+            ->on('membres')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
+
+            
+
+           /* $table->integer('id_psychologues')->unsigned();
+             $table->foreign('id_psychologues')
+            ->references('id_psychologues')
+            ->on('psychologues')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');*/
         });
     }
 

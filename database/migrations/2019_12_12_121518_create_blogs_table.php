@@ -13,10 +13,18 @@ class CreateBlogsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('blogs', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('fichier');
             $table->timestamps();
+
+            $table->integer('id_psychologues')->unsigned();
+             $table->foreign('id_psychologues')
+            ->references('id_psychologues')
+            ->on('psychologues')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
         });
     }
 
