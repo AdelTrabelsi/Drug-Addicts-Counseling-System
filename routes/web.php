@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -21,8 +22,9 @@ Route::get('/contact', function () {
 
 Route::get('/user','UserController@index') ;
 
-Route::resource('psychologues','PsychologuesController');
 
+Route::resource('psychologues','PsychologuesController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('membres','MembresController');
