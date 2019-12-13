@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -21,5 +22,5 @@ Route::get('/contact', function () {
 
 Route::get('/user','UserController@index') ;
 
-Route::resource('membres','MembresController');
 
+Route::resource('psychologues','PsychologuesController');
