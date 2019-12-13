@@ -21,7 +21,7 @@
 
 <div class="form-group">
     <label for="mdp">Mot de passe</label>
-    <input type="text" name="mdp" id="mdp" class="form-control @error('mdp') is-invalid @enderror"  placeholder="*******" aria-describedby="helpIdMdp">
+    <input type="password" name="mdp" id="mdp" class="form-control @error('mdp') is-invalid @enderror"  placeholder="*******" aria-describedby="helpIdMdp">
             
 </div>
 
