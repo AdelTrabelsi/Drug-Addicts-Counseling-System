@@ -14,11 +14,13 @@
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('/contact', function () {
     return view('contact');
 });
 
 
 Route::get('/user','UserController@index') ;
+
 
 Route::resource('psychologues','PsychologuesController');
