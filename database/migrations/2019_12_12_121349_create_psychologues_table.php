@@ -22,6 +22,8 @@ class CreatePsychologuesTable extends Migration
             $table->string('mdp');
             $table->unsignedBigInteger('tel');
             $table->timestamps();
+
+            
         });
     }
 
