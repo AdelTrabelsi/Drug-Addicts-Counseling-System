@@ -1,5 +1,9 @@
 @extends('layout')
 
+
+@section('header')
+@include('header')
+@endsection()
 @section('content')
 
 @if (session('successDelete'))
@@ -28,3 +32,6 @@
     </ul>
 @endsection
 
+@section('footer')
+@include('footer')
+@endsection()

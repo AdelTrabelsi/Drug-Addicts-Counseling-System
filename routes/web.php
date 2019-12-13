@@ -22,3 +22,7 @@ Route::get('/contact', function () {
 Route::get('/user','UserController@index') ;
 
 Route::resource('psychologues','PsychologuesController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Psychologue extends Model
+class Psychologue extends User
 {
     //
 
+    protected $primaryKey ="id_psychologues";   
     protected $guarded = [];
     public function discussions() 
     { 

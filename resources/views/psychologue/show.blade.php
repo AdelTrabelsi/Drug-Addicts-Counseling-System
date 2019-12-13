@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('content')
     <br><br>
     @if (session('successNewPsychologue'))

@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('header')
+@include('header')
+@endsection()
+
 @section('content')
     <fieldset>
         
@@ -12,3 +16,7 @@
         </form>
     </fieldset>
 @endsection
+
+@section('footer')
+@include('footer')
+@endsection()

@@ -11,5 +11,5 @@
 
 
 @section('footer')
-    hello footer
-    @endsection('footer')
+    @include('footer')
+@endsection('footer')
