@@ -51,7 +51,7 @@ class MembresController extends Controller
      */
     public function show(Membre $membre)
     {
-        return view('membres.show')->with('membre', $membre);
+        return view('membre.show')->with('membre', $membre);
     }
 
     /**

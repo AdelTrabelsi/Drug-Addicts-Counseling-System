@@ -1,5 +1,10 @@
 @extends('layout')
 @section('content')
+
+<div class="doctor-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
     <br><br>
     @if (session('successNewPsychologue'))
         <div class="alert alert-success alert-dismissible fade show">
@@ -41,4 +46,13 @@
                 </div>
             </div>
     </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
 @endsection
+
+@section('footer')
+    @include('footer')
+@endsection()

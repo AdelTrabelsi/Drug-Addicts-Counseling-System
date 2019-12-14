@@ -19,7 +19,13 @@
                 </div>
             </div>
             <div class="col-md-4 bar-btn text-right">
-                <a href="#">Connection</a>
+            @guest
+                <a href="{{route('login')}}">Connection</a>
+            @endguest
+            @auth 
+            <a href="{{route('logout')}}">se déconnecter</a>
+
+            @endauth
             </div>
         </div>
     </div>
@@ -76,76 +82,31 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
                     <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">---</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">---</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">---</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <a href="{{route('index')}}">Home</a>
+    
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Pages</a>
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Psychologists</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">--</a></li>
-                                </ul>
+                                <a href="{{route('psychologues.index') }}" class="dropdown-toggle" data-toggle="dropdown">Show all</a>
+                                
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Version One</a></li>
-                                    <li><a href="#">---</a></li>
-                                    <li><a href="#">Services Details</a></li>
-                                </ul>
+                                <a href="{{route('psychologues.create') }}" class="dropdown-toggle" data-toggle="dropdown">Add Psychologists</a>
                             </li>
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Departments</a>
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Membres</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">---</a></li>
-                            <li><a href="#">---</a></li>
+                            <li><a href="{{route('membres.index')}}">Show all</a></li>
+                            <li><a href="{{route('membres.create')}}">Create</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Psychologists</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">---</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Gallery</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">---</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">---</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">---</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">---</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">---</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">contact</a>
-                    </li>
+
+        
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>

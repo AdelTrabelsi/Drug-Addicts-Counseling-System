@@ -1,6 +1,15 @@
 @extends('layout')
 
+
+@section('header')
+    @include('header')
+@endsection()
 @section('content')
+
+<div class="doctor-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
     <br><br>
     @if (session('successNewMembre'))
         <div class="alert alert-success alert-dismissible fade show">
@@ -29,12 +38,12 @@
                 <li class="list-group-item">{{ $membre->mdp }}</li>
             </ul>
         </div>
-        <div class="panel-footer py-2">
+        <div class="panel-footer">
                 <div class="row">
-                    <a href="{{ route('membre.edit', ['membre'=> $membre->idmembre]) }}" class="btn btn-info">
+                    <a href="{{ route('membres.edit', ['membre'=> $membre->idmembre]) }}" class="btn btn-info">
                         Editer
                     </a>&nbsp;
-                    <form action="{{ route('membre.destroy', ['membre'=> $membre->idmembre]) }}" method="post">
+                    <form action="{{ route('membres.destroy', ['membre'=> $membre->idmembre]) }}" method="post">
                             @method('DELETE')
                             @csrf
                             <button class="btn btn-danger" type="submit">Supprimer</button>
@@ -42,4 +51,11 @@
                 </div>
             </div>
     </div>
+    </div>
+    </div>
+    </div>
 @endsection
+
+@section('footer')
+    @include('footer')
+@endsection()

@@ -1,7 +1,16 @@
 @extends('layout')
 
+@section('header')
+    @include('header')
+@endsection()
+
 @section('content')
 
+<div class="doctor-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+       
 @if (session('successDelete'))
     <div class="alert alert-danger alert-dismissible fade show">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -24,6 +33,18 @@
         @endforeach
         <div>
             {{ $membres->links() }}
-        </div>
+       </div>
     </ul>
+    
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+
 @endsection
+
+@section('footer')
+    @include('footer')
+@endsection()

@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -23,8 +23,11 @@ Route::get('/contact', function () {
 Route::get('/user','UserController@index') ;
 
 
-Route::resource('psychologues','PsychologuesController');
+Route::resource('psychologues','PsychologuesController')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('membres','MembresController');
+Route::resource('membres','MembresController')->middleware('auth');
+
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
+

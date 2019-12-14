@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Membre extends Model
 {
     
+    protected $primaryKey ="idmembre" ; 
   protected $guarded = [];
 
       public function discussions() 
